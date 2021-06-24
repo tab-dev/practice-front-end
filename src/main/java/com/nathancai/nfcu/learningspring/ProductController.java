@@ -3,6 +3,7 @@ package com.nathancai.nfcu.learningspring;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.math.BigDecimal;
@@ -17,15 +18,22 @@ public class ProductController {
     private static List<Product> createProducts(){
         List<Product> products = new ArrayList<>();
 
+
         for (int i = 0; i <= 15; i++) {
             Product product = new Product(Integer.toString(i),"Ultimate Pool Noodle " + i + "-th edition","The best pool noodle there is", BigDecimal.valueOf(i), i%10);
             products.add(product);
         }
+
+        // Tried below and product still would not show on table
+//        Product product=new Product("1","tst","tst",BigDecimal.valueOf(1),1);
+//        products.add(product);
+
         return products;
     }
 
     @GetMapping("/product")
-    public String getProducts() {
+    public String getProducts(Model model) {
+        model.addAttribute("products", products);
         return "products";
     }
 }
