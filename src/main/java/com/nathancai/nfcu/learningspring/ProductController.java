@@ -24,10 +24,6 @@ public class ProductController {
             products.add(product);
         }
 
-        // Tried below and product still would not show on table
-//        Product product=new Product("1","tst","tst",BigDecimal.valueOf(1),1);
-//        products.add(product);
-
         return products;
     }
 
