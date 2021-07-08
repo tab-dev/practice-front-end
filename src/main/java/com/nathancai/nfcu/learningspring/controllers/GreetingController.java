@@ -1,4 +1,4 @@
-package com.nathancai.nfcu.learningspring;
+package com.nathancai.nfcu.learningspring.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

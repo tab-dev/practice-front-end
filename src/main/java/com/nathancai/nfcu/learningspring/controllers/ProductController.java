@@ -1,5 +1,6 @@
-package com.nathancai.nfcu.learningspring;
+package com.nathancai.nfcu.learningspring.controllers;
 
+import com.nathancai.nfcu.learningspring.Product;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.stereotype.Controller;
