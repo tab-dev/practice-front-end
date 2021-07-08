@@ -1,7 +1,5 @@
 package com.nathancai.nfcu.learningspring;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Optional;
@@ -10,7 +8,6 @@ import java.util.Optional;
 public class ProductClient {
     private static final String RESOURCE_PATH="/rest/products";
 
-    private Logger LOG= LoggerFactory.getLogger(ProductClient.class);
     private String REQUEST_URI;
     private RestTemplate restTemplate;
 
