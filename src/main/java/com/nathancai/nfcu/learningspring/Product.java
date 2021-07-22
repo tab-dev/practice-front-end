@@ -10,7 +10,6 @@ public class Product {
     private String id;
 
     @NotNull
-    @Basic(optional=false)
     private String name;
 
     private String description;
